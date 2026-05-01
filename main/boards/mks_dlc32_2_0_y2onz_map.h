@@ -80,7 +80,7 @@
 #define N_AXIS 3
 #undef Y_GANGED
 #define Y_GANGED 1
-// Tell the core not to invent M3-based Y2 mappings
+// Tell the core not to inherit unrelated M3 mappings
 #undef M3_STEP_PIN
 #undef M3_DIRECTION_PIN
 #undef M3_LIMIT_PIN
@@ -93,12 +93,9 @@
 #ifndef M3_DIRECTION_PIN
 #define M3_DIRECTION_PIN I2SO(4) // confirmed correct by your Z test
 #endif                           // M3_DIRECTION_PIN
-// #ifndef M3_LIMIT_PIN_MIN
-// #define M3_LIMIT_PIN_MIN GPIO_NUM_34 // reuse old Z limit pin
-// #endif
-#ifndef Y2_LIMIT_PIN // Y2_LIMIT_PIN
-#define Y2_LIMIT_PIN GPIO_NUM_34
-#endif // Y2_LIMIT_PIN
+#ifndef M3_LIMIT_PIN
+#define M3_LIMIT_PIN GPIO_NUM_34 // reuse old Z limit pin as Y2 limit
+#endif                           // M3_LIMIT_PIN
 
 #ifndef Y_AUTO_SQUARE
 #define Y_AUTO_SQUARE 1

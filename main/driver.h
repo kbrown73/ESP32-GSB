@@ -46,6 +46,15 @@
 
 #define OPTS_POSTPROCESSING
 
+#if defined(BOARD_MKS_DLC32_V2P0_Y2ONZ)
+#ifndef Y_GANGED
+#define Y_GANGED 1
+#endif
+#ifndef Y_AUTO_SQUARE
+#define Y_AUTO_SQUARE 1
+#endif
+#endif
+
 #include "grbl/driver_opts.h"
 
 #include "soc/rtc.h"

@@ -3,6 +3,7 @@ platformio_override.ini
 cheat_sheet.txt
 build.log
 effective_config.txt
+.codex
 
 # Other vscode stuff
 # sdkconfig
